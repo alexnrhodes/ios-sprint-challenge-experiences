@@ -1,0 +1,6 @@
+framework module Pods_Experiences_ExperiencesUITests {
+  umbrella header "Pods-Experiences-ExperiencesUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
