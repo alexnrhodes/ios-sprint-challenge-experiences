@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class AddExperienceViewController: UIViewController {
+class ExperienceViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var SavedExperienceButton: UIButton!
@@ -25,6 +25,8 @@ class AddExperienceViewController: UIViewController {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         
+        mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: "ExperienceView")
+
         switch status {
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
@@ -39,10 +41,7 @@ class AddExperienceViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getUsersCurrentLocation()
-        //        let annotations = mapView.annotations.compactMap({ $0 as? (Experience)
-        //           return $0.coordinate
-        //        })
-        //        mapView.addAnnotation(annotations)
+        addAnnotation()
     }
     
     
@@ -72,6 +71,15 @@ class AddExperienceViewController: UIViewController {
         mapView.setRegion(mapViewArea, animated: true)
     }
     
+    func addAnnotation() {
+        let annotation = MKPointAnnotation()
+        guard let coordinate = experienceController.currentExperience?.coordinate, let title = experienceController.currentExperience?.experienceTitle else {return}
+    
+        annotation.title = title
+        annotation.coordinate = coordinate
+        mapView.addAnnotation(annotation)
+    }
+    
     
     /*
      // MARK: - Navigation
@@ -85,8 +93,15 @@ class AddExperienceViewController: UIViewController {
     
 }
 
-extension AddExperienceViewController: MKMapViewDelegate, CLLocationManagerDelegate {
-//    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-//        guard let experience = annotation as? Experience else { return nil }
-//    }
+extension ExperienceViewController: MKMapViewDelegate, CLLocationManagerDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard let experience = annotation as? Experience else { return nil }
+        
+         let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "ExperienceView", for: experience) as? MKMarkerAnnotationView
+        annotationView?.glyphText = experience.experienceTitle
+               annotationView?.glyphTintColor = .gray
+               annotationView?.titleVisibility = .visible
+        
+        return annotationView
+    }
 }

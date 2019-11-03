@@ -4,10 +4,55 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Create Experience View Controller-->
+        <scene sceneID="gWg-Jm-vGc">
+            <objects>
+                <viewController id="0rA-fM-doK" customClass="CreateExperienceViewController" customModule="Experiences" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nb9-qR-qIe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXT-PE-SgD">
+                                <rect key="frame" x="161" y="146" width="92" height="30"/>
+                                <state key="normal" title="Record Audio"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UT9-Ia-ZDK">
+                                <rect key="frame" x="159" y="93" width="97" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KrA-4H-ryF">
+                                <rect key="frame" x="169" y="184" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Take Photo"/>
+                                <connections>
+                                    <segue destination="yBk-Uj-pfv" kind="presentation" modalPresentationStyle="fullScreen" id="NF0-QD-AOY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="VXT-PE-SgD" firstAttribute="centerX" secondItem="nb9-qR-qIe" secondAttribute="centerX" id="2Nr-Nu-cA9"/>
+                            <constraint firstItem="VXT-PE-SgD" firstAttribute="top" secondItem="UT9-Ia-ZDK" secondAttribute="bottom" constant="19" id="6mP-rA-hvb"/>
+                            <constraint firstItem="rUt-LM-NlL" firstAttribute="bottom" secondItem="VXT-PE-SgD" secondAttribute="bottom" constant="238" id="G4y-5W-b6H"/>
+                            <constraint firstItem="VXT-PE-SgD" firstAttribute="centerX" secondItem="UT9-Ia-ZDK" secondAttribute="centerX" id="UXu-DZ-qHj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rUt-LM-NlL"/>
+                    </view>
+                    <size key="freeformSize" width="414" height="414"/>
+                    <connections>
+                        <outlet property="recordAudio" destination="VXT-PE-SgD" id="XyA-aD-oss"/>
+                        <outlet property="titleTextField" destination="UT9-Ia-ZDK" id="P0B-v8-o4w"/>
+                        <outlet property="uploadPhoto" destination="KrA-4H-ryF" id="2iX-Qi-s8T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lQf-jH-OjH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="746.37681159420299" y="391.74107142857139"/>
+        </scene>
         <!--Camera Preview View Controller-->
         <scene sceneID="e8k-Sb-8Fl">
             <objects>
@@ -88,64 +133,20 @@
             </objects>
             <point key="canvasLocation" x="1657.9710144927537" y="-455.35714285714283"/>
         </scene>
-        <!--Add Experience View Controller-->
+        <!--Experience View Controller-->
         <scene sceneID="AxC-9w-rXx">
             <objects>
-                <viewController id="1pt-Gu-8Ep" customClass="AddExperienceViewController" customModule="Experiences" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1pt-Gu-8Ep" customClass="ExperienceViewController" customModule="Experiences" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="890-Cg-6B7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="WJO-x7-RHz">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="479"/>
-                            </mapView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cnW-VW-GF8">
-                                <rect key="frame" x="0.0" y="479" width="414" height="383"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="383" id="U37-3k-t1N"/>
+                                    <constraint firstAttribute="height" constant="479" id="Oc9-LK-aFM"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0jb-aa-fA0">
-                                    <size key="itemSize" width="250" height="391"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ExperienceCell" id="0e8-7o-Fbs">
-                                        <rect key="frame" x="82" y="0.0" width="250" height="391"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="OyH-Ii-KUO">
-                                            <rect key="frame" x="0.0" y="0.0" width="250" height="391"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="RECORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Tf-HW-fFk">
-                                                    <rect key="frame" x="90" y="40" width="71" height="21"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="microphone" translatesAutoresizingMaskIntoConstraints="NO" id="Qfl-aa-zAz">
-                                                    <rect key="frame" x="5" y="86" width="240" height="240"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="Qfl-aa-zAz" secondAttribute="height" multiplier="1:1" id="JdJ-Ga-0AO"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Qfl-aa-zAz" firstAttribute="leading" secondItem="OyH-Ii-KUO" secondAttribute="leading" constant="5" id="pJC-hj-Xfj"/>
-                                                <constraint firstAttribute="trailing" secondItem="Qfl-aa-zAz" secondAttribute="trailing" constant="5" id="v94-nd-wpX"/>
-                                                <constraint firstItem="Qfl-aa-zAz" firstAttribute="top" secondItem="1Tf-HW-fFk" secondAttribute="bottom" constant="25" id="wd6-VS-ovB"/>
-                                                <constraint firstItem="1Tf-HW-fFk" firstAttribute="top" secondItem="OyH-Ii-KUO" secondAttribute="top" constant="40" id="zWr-P0-YNW"/>
-                                            </constraints>
-                                        </collectionViewCellContentView>
-                                        <size key="customSize" width="250" height="391"/>
-                                        <connections>
-                                            <segue destination="yBk-Uj-pfv" kind="presentation" identifier="RecordVideo" modalPresentationStyle="fullScreen" id="XDL-qT-tjP"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
+                            </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCA-ai-fWF">
                                 <rect key="frame" x="353" y="421" width="46" height="46"/>
                                 <constraints>
@@ -156,19 +157,26 @@
                                     <segue destination="C6p-jK-YVH" kind="presentation" modalPresentationStyle="fullScreen" id="K4A-tk-PgD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="di5-aj-Mwo">
+                                <rect key="frame" x="144" y="547" width="126" height="30"/>
+                                <state key="normal" title="Create Experience"/>
+                                <connections>
+                                    <segue destination="0rA-fM-doK" kind="popoverPresentation" popoverAnchorView="di5-aj-Mwo" id="cOt-d2-6ej">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="cnW-VW-GF8" firstAttribute="bottom" secondItem="890-Cg-6B7" secondAttribute="bottom" constant="-34" id="3Cf-ci-M2g"/>
+                            <constraint firstItem="di5-aj-Mwo" firstAttribute="top" secondItem="WJO-x7-RHz" secondAttribute="bottom" constant="68" id="3Gg-zs-eCl"/>
+                            <constraint firstItem="WJO-x7-RHz" firstAttribute="centerX" secondItem="di5-aj-Mwo" secondAttribute="centerX" id="8S7-no-026"/>
                             <constraint firstItem="WJO-x7-RHz" firstAttribute="leading" secondItem="890-Cg-6B7" secondAttribute="leading" id="Au3-r1-nBr"/>
-                            <constraint firstItem="cnW-VW-GF8" firstAttribute="leading" secondItem="890-Cg-6B7" secondAttribute="leading" id="Gy6-aC-ehn"/>
                             <constraint firstItem="WJO-x7-RHz" firstAttribute="top" secondItem="890-Cg-6B7" secondAttribute="top" id="ZrD-7R-wEr"/>
-                            <constraint firstItem="cnW-VW-GF8" firstAttribute="top" secondItem="aCA-ai-fWF" secondAttribute="bottom" constant="12" id="hnE-oM-Oez"/>
                             <constraint firstItem="aCA-ai-fWF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QhO-Xf-ZzX" secondAttribute="leading" constant="8" id="jdN-jc-JAm"/>
                             <constraint firstItem="QhO-Xf-ZzX" firstAttribute="trailing" secondItem="aCA-ai-fWF" secondAttribute="trailing" constant="15" id="je2-m1-DSq"/>
+                            <constraint firstItem="aCA-ai-fWF" firstAttribute="top" secondItem="QhO-Xf-ZzX" secondAttribute="top" constant="377" id="kl5-Hf-Liq"/>
                             <constraint firstItem="WJO-x7-RHz" firstAttribute="trailing" secondItem="890-Cg-6B7" secondAttribute="trailing" id="m4m-i6-9c7"/>
-                            <constraint firstItem="cnW-VW-GF8" firstAttribute="top" secondItem="WJO-x7-RHz" secondAttribute="bottom" id="uck-cA-Nug"/>
-                            <constraint firstItem="cnW-VW-GF8" firstAttribute="trailing" secondItem="890-Cg-6B7" secondAttribute="trailing" id="yXz-xi-IsZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QhO-Xf-ZzX"/>
                     </view>
@@ -182,7 +190,4 @@
             <point key="canvasLocation" x="746.37681159420299" y="-131.91964285714286"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="microphone" width="240" height="240"/>
-    </resources>
 </document>

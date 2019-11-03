@@ -19,5 +19,6 @@ class ExperienceController {
         
         let experience = Experience(experienceTitle: title, coordinate: coordinate, audio: audio, video: video, image: image)
         experiences.append(experience)
+        self.currentExperience = experience
     }
 }

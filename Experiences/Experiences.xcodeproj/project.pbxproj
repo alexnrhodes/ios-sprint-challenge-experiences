@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		38491ACE236CAAFB005CB810 /* Experience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38491ACD236CAAFB005CB810 /* Experience.swift */; };
 		38491AD0236CAF60005CB810 /* ExperienceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38491ACF236CAF60005CB810 /* ExperienceController.swift */; };
+		384EEE66236F2AD300D2CE67 /* CreateExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384EEE65236F2AD300D2CE67 /* CreateExperienceViewController.swift */; };
+		384EEE68236F2B9B00D2CE67 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384EEE67236F2B9B00D2CE67 /* AudioPlayer.swift */; };
+		384EEE6A236F2BAB00D2CE67 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384EEE69236F2BAB00D2CE67 /* AudioRecorder.swift */; };
 		38FD3AE5236C917F008042C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FD3AE4236C917F008042C1 /* AppDelegate.swift */; };
 		38FD3AE7236C9180008042C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FD3AE6236C9180008042C1 /* SceneDelegate.swift */; };
 		38FD3AEF236C9180008042C1 /* Experiences.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 38FD3AED236C9180008042C1 /* Experiences.xcdatamodeld */; };
 		38FD3AF1236C9181008042C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38FD3AF0236C9181008042C1 /* Assets.xcassets */; };
 		38FD3AFF236C9181008042C1 /* ExperiencesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FD3AFE236C9181008042C1 /* ExperiencesTests.swift */; };
 		38FD3B0A236C9181008042C1 /* ExperiencesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FD3B09236C9181008042C1 /* ExperiencesUITests.swift */; };
-		38FD3B1B236C99DB008042C1 /* AddExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FD3B1A236C99DB008042C1 /* AddExperienceViewController.swift */; };
+		38FD3B1B236C99DB008042C1 /* ExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FD3B1A236C99DB008042C1 /* ExperienceViewController.swift */; };
 		38FD3B1D236C99F0008042C1 /* SavedExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FD3B1C236C99F0008042C1 /* SavedExperienceViewController.swift */; };
 		38FD3B1F236C99FD008042C1 /* CameraPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FD3B1E236C99FD008042C1 /* CameraPreviewViewController.swift */; };
 		38FD3B22236C9A2B008042C1 /* ExperienceTypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FD3B21236C9A2B008042C1 /* ExperienceTypeCollectionViewCell.swift */; };
@@ -48,6 +51,9 @@
 		383B674A236CA39700C32510 /* ScalingCarousel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ScalingCarousel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38491ACD236CAAFB005CB810 /* Experience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Experience.swift; sourceTree = "<group>"; };
 		38491ACF236CAF60005CB810 /* ExperienceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceController.swift; sourceTree = "<group>"; };
+		384EEE65236F2AD300D2CE67 /* CreateExperienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateExperienceViewController.swift; sourceTree = "<group>"; };
+		384EEE67236F2B9B00D2CE67 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		384EEE69236F2BAB00D2CE67 /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
 		38FD3AE1236C917F008042C1 /* Experiences.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Experiences.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38FD3AE4236C917F008042C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		38FD3AE6236C9180008042C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,7 +66,7 @@
 		38FD3B05236C9181008042C1 /* ExperiencesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExperiencesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38FD3B09236C9181008042C1 /* ExperiencesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperiencesUITests.swift; sourceTree = "<group>"; };
 		38FD3B0B236C9181008042C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		38FD3B1A236C99DB008042C1 /* AddExperienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExperienceViewController.swift; sourceTree = "<group>"; };
+		38FD3B1A236C99DB008042C1 /* ExperienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceViewController.swift; sourceTree = "<group>"; };
 		38FD3B1C236C99F0008042C1 /* SavedExperienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedExperienceViewController.swift; sourceTree = "<group>"; };
 		38FD3B1E236C99FD008042C1 /* CameraPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewViewController.swift; sourceTree = "<group>"; };
 		38FD3B21236C9A2B008042C1 /* ExperienceTypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceTypeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -103,6 +109,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		384EEE6B236F2BE200D2CE67 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				384EEE67236F2B9B00D2CE67 /* AudioPlayer.swift */,
+				384EEE69236F2BAB00D2CE67 /* AudioRecorder.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		38FD3AD8236C917F008042C1 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +148,7 @@
 				38FD3B23236C9A3E008042C1 /* Custom Views */,
 				38FD3B18236C999E008042C1 /* Storyboards */,
 				38FD3B17236C998F008042C1 /* Resources */,
+				384EEE6B236F2BE200D2CE67 /* Helpers */,
 			);
 			path = Experiences;
 			sourceTree = "<group>";
@@ -187,9 +203,10 @@
 		38FD3B20236C9A07008042C1 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				38FD3B1A236C99DB008042C1 /* AddExperienceViewController.swift */,
+				38FD3B1A236C99DB008042C1 /* ExperienceViewController.swift */,
 				38FD3B1C236C99F0008042C1 /* SavedExperienceViewController.swift */,
 				38FD3B1E236C99FD008042C1 /* CameraPreviewViewController.swift */,
+				384EEE65236F2AD300D2CE67 /* CreateExperienceViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -448,9 +465,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				38FD3B1D236C99F0008042C1 /* SavedExperienceViewController.swift in Sources */,
-				38FD3B1B236C99DB008042C1 /* AddExperienceViewController.swift in Sources */,
+				38FD3B1B236C99DB008042C1 /* ExperienceViewController.swift in Sources */,
+				384EEE68236F2B9B00D2CE67 /* AudioPlayer.swift in Sources */,
 				38FD3B22236C9A2B008042C1 /* ExperienceTypeCollectionViewCell.swift in Sources */,
 				38491AD0236CAF60005CB810 /* ExperienceController.swift in Sources */,
+				384EEE66236F2AD300D2CE67 /* CreateExperienceViewController.swift in Sources */,
+				384EEE6A236F2BAB00D2CE67 /* AudioRecorder.swift in Sources */,
 				38491ACE236CAAFB005CB810 /* Experience.swift in Sources */,
 				38FD3AE5236C917F008042C1 /* AppDelegate.swift in Sources */,
 				38FD3AE7236C9180008042C1 /* SceneDelegate.swift in Sources */,
