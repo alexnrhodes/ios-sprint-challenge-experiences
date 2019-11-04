@@ -139,15 +139,15 @@
             <objects>
                 <viewController id="C6p-jK-YVH" customClass="SavedExperienceViewController" customModule="Experiences" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4jM-Xy-XdV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XlS-YI-lXW">
-                                <rect key="frame" x="50" y="250" width="314" height="575"/>
+                                <rect key="frame" x="50" y="206" width="314" height="565"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Happiness isn't  something you experience,  but something you remember.&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="meo-bh-s7X">
-                                <rect key="frame" x="90" y="119" width="236" height="93"/>
+                                <rect key="frame" x="90" y="75" width="236" height="93"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="93" id="mCa-ew-Yxa"/>
                                 </constraints>
@@ -197,7 +197,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="C6p-jK-YVH" kind="presentation" modalPresentationStyle="fullScreen" id="K4A-tk-PgD"/>
+                                    <segue destination="C6p-jK-YVH" kind="presentation" id="K4A-tk-PgD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="di5-aj-Mwo">

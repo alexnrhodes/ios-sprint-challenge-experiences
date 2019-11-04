@@ -32,6 +32,21 @@ class SavedExperienceViewController: UIViewController {
 
 }
 
-extension SavedExperienceViewController: UITableViewDegelagte {
+extension SavedExperienceViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return experienceController.experiences.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ExperienceCell", for: indexPath)
+        
+        let experience = experienceController.experiences[indexPath.row]
+        cell.textLabel?.text = experience.experienceTitle
+        
+        return cell
+    }
+    
 
+    
 }

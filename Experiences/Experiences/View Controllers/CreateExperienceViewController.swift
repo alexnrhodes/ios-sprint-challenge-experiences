@@ -37,20 +37,7 @@ class CreateExperienceViewController: UIViewController {
       // Gets called when a ViewController is created
       // from storyboard
      
-    var originalImage: UIImage? {
-        didSet {
-//            guard let image = originalImage else { return }
-//
-//            var scaledSize = imageView.bounds.size // gets the physical number of pixels on screen
-//
-//            // 1x 2x 3x
-//            let scale = UIScreen.main.scale
-//
-//            scaledSize = CGSize(width: scaledSize.width * scale, height: scaledSize.height * scale)
-//            scaledImage = image.imageByScaling(toSize: scaledSize)
-        }
-    }
-
+    var originalImage: UIImage?
     
     var scaledImage: UIImage? {
         didSet {
@@ -76,10 +63,11 @@ class CreateExperienceViewController: UIViewController {
         
         guard let audio = recorder.url,
         let location = location,
-            let title = titleTextField.text,
-        let image = originalImage else {return}
+            let title = titleTextField.text, let image = originalImage else {return}
         
         experiencController.addExperience(audio: audio, video: nil, image: image, coordinate: location, title: title)
+        
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func playAudioButtonPressed(_ sender: UIButton) {
