@@ -18,6 +18,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXT-PE-SgD">
                                 <rect key="frame" x="161" y="146" width="92" height="30"/>
                                 <state key="normal" title="Record Audio"/>
+                                <connections>
+                                    <action selector="recordAudioButtonTapped:" destination="0rA-fM-doK" eventType="touchUpInside" id="7cU-DX-SGG"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UT9-Ia-ZDK">
                                 <rect key="frame" x="159" y="93" width="97" height="34"/>
@@ -30,6 +33,14 @@
                                 <state key="normal" title="Take Photo"/>
                                 <connections>
                                     <segue destination="yBk-Uj-pfv" kind="presentation" modalPresentationStyle="fullScreen" id="NF0-QD-AOY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBt-vR-Bad">
+                                <rect key="frame" x="270" y="146" width="67" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="PlayAudio"/>
+                                <connections>
+                                    <action selector="playAudioButtonPressed:" destination="0rA-fM-doK" eventType="touchUpInside" id="5pG-am-CYt"/>
                                 </connections>
                             </button>
                         </subviews>

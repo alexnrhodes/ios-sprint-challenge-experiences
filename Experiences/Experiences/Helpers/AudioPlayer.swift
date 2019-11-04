@@ -18,7 +18,7 @@ class Player: NSObject {
     
     var audioPlayer: AVAudioPlayer?
     var delegate: PlayerDelegate?
-    var url: URL
+    var url: URL?
     var timer: Timer?
     
     var timeElapsed: TimeInterval {
@@ -34,21 +34,24 @@ class Player: NSObject {
         duration - timeElapsed
     }
     
-    
-    init(url: URL = Bundle.main.url(forResource: "piano", withExtension: "mp3")!) {
-        self.url = url
+    func playRecordedAudio(url: URL) {
+        let newUrl = url
+        self.url = newUrl
         
-        // create an audio player
-        do {
+      do {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
         } catch {
             print("AudioPlayer Error: \(url)")
         }
-        
-        super.init()
-        
-        audioPlayer?.delegate = self
     }
+    
+//    init(url: URL?) {
+//        self.url = url
+//        
+//        super.init()
+//        
+//        audioPlayer?.delegate = self
+//    }
     
     // isPlaying
     // play
