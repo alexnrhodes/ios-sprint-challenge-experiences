@@ -10,10 +10,13 @@ import UIKit
 
 class SavedExperienceViewController: UIViewController {
 
+    let experienceController = ExperienceController.shared
+    
+    @IBOutlet weak var experienceTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        experienceTableView.delegate = self
     }
     
 
@@ -26,5 +29,9 @@ class SavedExperienceViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
+}
+
+extension SavedExperienceViewController: UITableViewDegelagte {
 
 }

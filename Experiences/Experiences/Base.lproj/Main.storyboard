@@ -16,53 +16,82 @@
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXT-PE-SgD">
-                                <rect key="frame" x="161" y="146" width="92" height="30"/>
+                                <rect key="frame" x="97" y="288" width="92" height="30"/>
                                 <state key="normal" title="Record Audio"/>
                                 <connections>
                                     <action selector="recordAudioButtonTapped:" destination="0rA-fM-doK" eventType="touchUpInside" id="7cU-DX-SGG"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UT9-Ia-ZDK">
-                                <rect key="frame" x="159" y="93" width="97" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KrA-4H-ryF">
-                                <rect key="frame" x="169" y="184" width="76" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Take Photo"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KrA-4H-ryF">
+                                <rect key="frame" x="161" y="326" width="94" height="30"/>
+                                <state key="normal" title="Upload Photo"/>
                                 <connections>
+                                    <action selector="UploadPhotoButtonTapped:" destination="0rA-fM-doK" eventType="touchUpInside" id="Yck-6Y-pru"/>
                                     <segue destination="yBk-Uj-pfv" kind="presentation" modalPresentationStyle="fullScreen" id="NF0-QD-AOY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBt-vR-Bad">
-                                <rect key="frame" x="270" y="146" width="67" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBt-vR-Bad">
+                                <rect key="frame" x="233" y="288" width="67" height="30"/>
                                 <state key="normal" title="PlayAudio"/>
                                 <connections>
                                     <action selector="playAudioButtonPressed:" destination="0rA-fM-doK" eventType="touchUpInside" id="5pG-am-CYt"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLY-Ej-j0O">
+                                <rect key="frame" x="150.5" y="364" width="113" height="30"/>
+                                <state key="normal" title="Save Experience"/>
+                                <connections>
+                                    <action selector="saveExperience:" destination="0rA-fM-doK" eventType="touchUpInside" id="Dlz-Cy-f36"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I9f-Sc-OJ3">
+                                <rect key="frame" x="87" y="34" width="240" height="182"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="182" id="V3h-31-bze"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UT9-Ia-ZDK">
+                                <rect key="frame" x="97" y="246" width="222" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="VXT-PE-SgD" firstAttribute="centerX" secondItem="nb9-qR-qIe" secondAttribute="centerX" id="2Nr-Nu-cA9"/>
-                            <constraint firstItem="VXT-PE-SgD" firstAttribute="top" secondItem="UT9-Ia-ZDK" secondAttribute="bottom" constant="19" id="6mP-rA-hvb"/>
-                            <constraint firstItem="rUt-LM-NlL" firstAttribute="bottom" secondItem="VXT-PE-SgD" secondAttribute="bottom" constant="238" id="G4y-5W-b6H"/>
-                            <constraint firstItem="VXT-PE-SgD" firstAttribute="centerX" secondItem="UT9-Ia-ZDK" secondAttribute="centerX" id="UXu-DZ-qHj"/>
+                            <constraint firstItem="rUt-LM-NlL" firstAttribute="bottom" secondItem="pLY-Ej-j0O" secondAttribute="bottom" constant="20" id="4h9-Ui-Xjt"/>
+                            <constraint firstItem="pLY-Ej-j0O" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rUt-LM-NlL" secondAttribute="leading" constant="8" id="6uu-u1-ebK"/>
+                            <constraint firstItem="pLY-Ej-j0O" firstAttribute="centerX" secondItem="nb9-qR-qIe" secondAttribute="centerX" id="795-jI-HX8"/>
+                            <constraint firstItem="pLY-Ej-j0O" firstAttribute="centerX" secondItem="UT9-Ia-ZDK" secondAttribute="centerX" id="Brp-Kf-Dg9"/>
+                            <constraint firstItem="VXT-PE-SgD" firstAttribute="leading" secondItem="UT9-Ia-ZDK" secondAttribute="leading" id="CEq-17-Ff6"/>
+                            <constraint firstItem="UT9-Ia-ZDK" firstAttribute="top" secondItem="I9f-Sc-OJ3" secondAttribute="bottom" constant="30" id="Edd-qw-pZJ"/>
+                            <constraint firstItem="pLY-Ej-j0O" firstAttribute="centerX" secondItem="KrA-4H-ryF" secondAttribute="centerX" id="FBc-XG-uyb"/>
+                            <constraint firstItem="I9f-Sc-OJ3" firstAttribute="top" secondItem="nb9-qR-qIe" secondAttribute="top" constant="34" id="NnK-vm-Irc"/>
+                            <constraint firstItem="DBt-vR-Bad" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="VXT-PE-SgD" secondAttribute="trailing" symbolic="YES" id="Nzh-2f-GqF"/>
+                            <constraint firstItem="pLY-Ej-j0O" firstAttribute="top" secondItem="KrA-4H-ryF" secondAttribute="bottom" constant="8" id="Uw9-Ba-dFC"/>
+                            <constraint firstItem="pLY-Ej-j0O" firstAttribute="centerX" secondItem="I9f-Sc-OJ3" secondAttribute="centerX" id="euZ-PJ-1PI"/>
+                            <constraint firstItem="VXT-PE-SgD" firstAttribute="baseline" secondItem="DBt-vR-Bad" secondAttribute="baseline" id="gUN-zW-EXn"/>
+                            <constraint firstItem="I9f-Sc-OJ3" firstAttribute="top" secondItem="nb9-qR-qIe" secondAttribute="topMargin" constant="-10" id="iYq-68-EV0"/>
+                            <constraint firstItem="rUt-LM-NlL" firstAttribute="trailing" secondItem="DBt-vR-Bad" secondAttribute="trailing" constant="114" id="ifp-CC-1Ld"/>
+                            <constraint firstItem="I9f-Sc-OJ3" firstAttribute="leading" secondItem="rUt-LM-NlL" secondAttribute="leading" constant="87" id="n5h-P5-dyp"/>
+                            <constraint firstItem="VXT-PE-SgD" firstAttribute="top" secondItem="UT9-Ia-ZDK" secondAttribute="bottom" constant="8" id="oyn-XK-KZl"/>
+                            <constraint firstItem="VXT-PE-SgD" firstAttribute="leading" secondItem="rUt-LM-NlL" secondAttribute="leading" constant="97" id="zUb-m9-w5t"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rUt-LM-NlL"/>
                     </view>
                     <size key="freeformSize" width="414" height="414"/>
                     <connections>
+                        <outlet property="imageView" destination="I9f-Sc-OJ3" id="R56-UA-JuD"/>
+                        <outlet property="playPauseButton" destination="DBt-vR-Bad" id="hze-4G-1YW"/>
                         <outlet property="recordAudio" destination="VXT-PE-SgD" id="XyA-aD-oss"/>
+                        <outlet property="saveExperienceButton" destination="pLY-Ej-j0O" id="MHG-qw-wG3"/>
                         <outlet property="titleTextField" destination="UT9-Ia-ZDK" id="P0B-v8-o4w"/>
                         <outlet property="uploadPhoto" destination="KrA-4H-ryF" id="2iX-Qi-s8T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lQf-jH-OjH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="746.37681159420299" y="391.74107142857139"/>
+            <point key="canvasLocation" x="747.82608695652175" y="423.88392857142856"/>
         </scene>
         <!--Camera Preview View Controller-->
         <scene sceneID="e8k-Sb-8Fl">
@@ -139,6 +168,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VA0-bw-7u5"/>
                     </view>
+                    <connections>
+                        <outlet property="experienceTableView" destination="XlS-YI-lXW" id="4KD-xf-1zz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fM2-5h-VV0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

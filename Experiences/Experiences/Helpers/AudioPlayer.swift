@@ -45,41 +45,12 @@ class Player: NSObject {
         }
     }
     
-//    init(url: URL?) {
-//        self.url = url
-//        
-//        super.init()
-//        
-//        audioPlayer?.delegate = self
-//    }
-    
-    // isPlaying
-    // play
-    // pause
-    // playPause
-    
     var isPlaying: Bool {
         return audioPlayer?.isPlaying ?? false
     }
     
     func play() {
-        // Option 1
-//        if let audioPlayer = audioPlayer {
-//            audioPlayer.play()
-            // do other work here
-//        }
-        
-        // Option 2
-//        guard let audioPlayer = audioPlayer else {
-//            print("Error: no player")
-//            return
-//        }
-//
-//        audioPlayer.play()
-//      analytics.record("play")
-        
-        // Option 3: Optional chaining
-        audioPlayer?.play()         // if nil, this is a no-op (no operation: i.e.: nothing happens)
+        audioPlayer?.play()
         delegate?.playerDidChangeState(player: self)
         startTimer()
     }
